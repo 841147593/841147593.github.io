@@ -1,0 +1,116 @@
+
+<! This little bit of code started with https://www.wikihow.com/Create-a-Questionnaire-in-HTML and got modified, by then using info from w3schools.com to continue.
+
+This is an UGLY survey....  PLEASE MODIFY IT!
+
+Caroline Barrière
+May 2020
+
+>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+	<! IMPORTANT to use a CSS file - external >
+	<link href="styles/style.css" rel="stylesheet" type="text/css">
+    <title>Lab 1 Linjie Fang</title>
+  </head>
+  
+  <body>
+	<h1>UI Survey</h1>
+	<form id="myform" action="index.php" >
+	<br>
+	<br>
+	<! Choose a website to evaluate >
+	<h2>What do you think of the UI in this <a href="https://www.footlocker.ca/">Foot locker</a> site?</h2>	
+	<br>
+	<br>
+	<! You should make your image clickable>
+	<img src="images/footlocker-FrontPage.JPG" alt="https://www.footlocker.ca/" width="600" height="400">
+	<br>
+	<br>
+	<div class="information">
+	<h2> User information </h2>
+	<p>Contact information(Either cell phone or email): <input type="text" name="Contact"></p>
+	<p>Please select your gender:</p>
+    <input type="radio" id="male" name="gender" value="male">
+  	<label for="male">Male</label><br>
+  	<input type="radio" id="female" name="gender" value="female">
+  	<label for="female">Female</label><br>
+  	<input type="radio" id="other" name="gender" value="other">
+  	<label for="other">Other</label>
+ 
+  	<br>  
+
+  	<p>Please select your age range:</p>
+ 	<select id="age">
+		<option value="0-18"> 0-18</option>
+		<option value="19-30">19-30</option>
+		<option value="31-50">31-60</option>
+		<option value="60+"> 61+</option>
+	</select>	
+	<br>
+	<br>
+		
+	</div>	
+		
+	<div class="question">
+		<h2> UI evaluation </h2>
+		<p>Describe your first impression of the website <input type="text" name="impression"></p>
+
+		<p>Do you think you can easily find the items you want in this website?:</p>
+				    <input type="radio" id="canfinditem" name="item" value="yes">
+				  	<label for="canfinditem">Yes</label><br>
+				  	<input type="radio" id="cantfinditem" name="item" value="female">
+				  	<label for="cantfinditem">No</label><br><br>
+
+
+		<p>Which of the following features do you think the UI have? :</p>
+		<input type="checkbox" name="features" value="Proper functionality">Proper functionality<br>
+		<input type="checkbox" name="features" value="Consistency">Consistency<br>
+		<input type="checkbox" name="features" value="Efficiency">Efficiency<br>
+		<input type="checkbox" name="features" value="Usability">Usability<br>
+		<input type="checkbox" name="features" value="Reliability">Reliability<br>
+		<input type="checkbox" name="features" value="Security and Data integrity">Security and Data integrity<br>
+
+		<br>
+		<p>Do you think this website has a good UI design compared to the other website you have seen? </p>
+		<select id="recommand">			
+			<option value="Yes">Yes</option>
+			<option value="No">No</option>
+		</select>
+		<p>Would you recommand this UI to the other user?(Rate from 1 to 5. 1 for strongly disagree,5 for strongly agree)</p>
+		<select id="recommand">			
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+		</select>
+		<br>
+		<br>
+			
+		<p>Comments:</p>
+		<textarea rows="5" cols="30"></textarea>
+	</div>
+	
+
+			
+	<br>
+	<br>
+			
+
+
+	</form>
+
+		<button id="submitButton" type="button" class="block">
+		SUBMIT your survey
+	</button>
+
+	<footer>
+	  <p id="signature">Author: Linjie Fang</p>
+	  <p id="signature"><a href="mailto:ffang103@uottawa.ca">ffang103@uottawa.ca</a></p>
+	</footer>
+  </body>
+</html> 
