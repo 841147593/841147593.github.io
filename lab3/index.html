@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<! This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp>
+	<link href="styles/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+ <h1>Linjie's grocery store</h1> 
+<!-- Tab links, each one with an onclick event associated with it -->
+<div class="tab">
+  <button class="tablinks" onclick="openInfo(event, 'Client')">Client Perferences</button>
+  <button class="tablinks" onclick="openInfo(event, 'Products')">List of Products</button>
+  <button class="tablinks" onclick="openInfo(event, 'Cart')">Shopping Cart</button>
+</div>
+
+<!-- Tab content -->
+<div id="Client" class="tabcontent">
+  <h3>Client Perferences</h3>
+  <p>Let us konw if you have any perferences on food</p>
+	Choose any perferences you like:<br>
+
+	<div id="dietSelect">
+	<input type="checkbox" id="Vegetarian" name="Vegetarian" value="Vegetarian">
+	<label for="Vegetarian">Vegetarian</label><br>
+	<input type="checkbox" id="GlutenFree" name="GlutenFree" value="GlutenFree">
+	<label for="GlutenFree">Gluten free food</label><br>
+	<input type="checkbox" id="Organic" name="Organic" value="Organic">
+	<label for="Organic"> Organic food</label><br>
+	</div>
+
+	<button id="Preferencess" type="button" class="block" onclick="openInfo(event, 'Products'); opulateListProductChoices(this.id, 'displayProduct')">Save my perferences</button>
+ 
+</div>
+
+<div id="Products" class="tabcontent">
+  <h3>Your targeted products</h3>
+  <p>We preselected products based on your perferences.</p>
+	 Choose items to buy:
+	 <div id="displayProduct"></div>
+	 		<br>
+            <button class="accordion">Vegetables</button>
+            <div id="Vegetables" class="food-category"></div>
+
+            <button class="accordion">Meat</button>
+            <div id="Meat" class="food-category"></div>
+
+            <button class="accordion">Fruit</button>
+            <div id="Fruit" class="food-category"></div>
+
+            <button class="accordion">Other</button>
+            <div id="other" class="food-category"></div>
+			<br>
+	 <button id="addCart" type="button" class="block" onclick="selectedItems()">
+		Add selected items to cart.
+	</button>
+</div>
+
+<div id="Cart" class="tabcontent">
+  <h3>Cart</h3>
+  <p>Here is your cart.</p>
+  <div id="displayCart"></div>
+</div>
+
+<script src="scripts/groceries.js"></script>
+<script src="scripts/main.js"></script>
+	<footer>
+	  <p id="signature">Author: Linjie Fang</p>
+	  <p id="signature"><a href="mailto:ffang103@uottawa.ca">ffang103@uottawa.ca</a></p>
+	</footer>
+</body>
+</html>
