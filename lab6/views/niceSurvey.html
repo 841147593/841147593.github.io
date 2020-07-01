@@ -10,32 +10,66 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
     <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
+    <style type = "text/css">
+			body{
+				background-color: lightskyblue;
+      }
+
+
+			
+		</style>
+	</head>
   </head>
 
   <body>
    <!--//some of the code were inspired from https://www.w3schools.com/html/html_form_input_types.asp-->
-	<div class="container-md p-3 my-3 border bg-dark text-white" id="survey">
-    <h1>Survey</h1>
+   <nav class="navbar navbar-expand-sm bg-light">
+
+    <!-- Links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#fruit">Fruits</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#color">Color</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#gender">Gender</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#cars">Cars</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#animal">Animal</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#rate">Rate</a>
+      </li>
+    </ul>
+  
+  </nav>
+   <div class="container-md p-3 my-3 border bg-dark text-white" id="survey">
+    <h1>Personal preferences survey</h1>
+    <br><br><br>
     <form>
-      <h2> What fruits(s) do you like? </h2>
+      <h2 id="fruit"> What fruits(s) do you like? </h2>
       I like:<br>
       <input type="text" name="fruit" placeholder="fruit name..." required />
-      <br>
-      <br>
-      <h2> What color(s) do you like? </h2>
+      <br><br><br>
+      <h2 id="color"> What color(s) do you like? </h2>
 	    I like:<br>
 		  <input type="checkbox" name="color" value="Red"> Red<br>
 		  <input type="checkbox" name="color" value="Green"> Green<br>
       <input type="checkbox" name="color" value="Blue"> Blue<br>
-      <br>
-      <h2>What is your gender?</h2>
+      <br><br><br>
+      <h2 id="gender">What is your gender?</h2>
       <input type="radio" id="male" name="gender" value="male">
       <label for="male">Male</label><br>
       <input type="radio" id="female" name="gender" value="female">
       <label for="female">Female</label><br>
       <input type="radio" id="other" name="gender" value="other">
       <label for="other">Other</label>
-      <br>
+      <br><br><br>
       <h2>Choose your favorite car:</h2>
       <br>
       <select id="cars" name="cars" size="5">
@@ -44,15 +78,15 @@
         <option value="fiat">Fiat</option>
         <option value="audi">Audi</option>
         <option value="audi">Others</option>
-      </select><br><br>
+      </select><br><br><br>
       <h2>What is your favorite animal?</h2>
       I like:<br>
-      <select name="animal">
+      <select name="animal" id="animal">
 			  <option value="Cat" selected="selected">Cat</option>
 			  <option value="Dog">Dog</option>
 			  <option value="Turtle">Turtle</option>
       </select>
-      <br>
+      <br><br><br>
       <label for="vol">Rate this survey (between 0 to 10):</label><br>
       <input type="range" id="rate" name="rate" min="0" max="10">
       <br><br>
